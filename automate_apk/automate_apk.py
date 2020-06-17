@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import glob
 
 try:
     input = raw_input
@@ -10,6 +11,13 @@ try:
     app_name = input("Enter app's name: ")
     app_version = input("Enter app's version: ")
     pubspec_path = input("Enter app's root folder location with respect to current folder: ")
+
+    for apk in glob.glob("*.apk"):
+        if apk:
+            os.remove(apk)
+    for aab in glob.glob("*.aab"):
+        if aab:
+            os.remove(aab)
 
     path = pubspec_path + "build/app/outputs/apk/release/app-release.apk"
 
