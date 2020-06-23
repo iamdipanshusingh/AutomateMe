@@ -35,7 +35,7 @@ try:
     if not options.name:
         _name = input('What do you want to name your git-log? ')
 
-    os.system("git log --oneline " + _from + "..." + _to + " > " + _path + _name)
+    os.system("git log --oneline " + _from + "..." + _to + " > " + _path + _name + ".logs")
 
     os.system("nautilus " + _path)
 
