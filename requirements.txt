@@ -23,7 +23,7 @@ fasteners==0.14.1
 ffmpeg-python==0.2.0
 filelock==3.0.12
 future==0.18.2
-httplib2==0.14.0
+httplib2==0.18.0
 huepy==1.2.1
 idna==2.8
 imageio==2.9.0
