@@ -8,6 +8,9 @@ This script mainly creates an apk, by just taking 3-4 inputs in the starting.
 So, what this does is, it creates an apk and opens the folder containing the apk, with the above mentioned name format, so that I can make coffee in the meantime.
 
 ## git_logger
-This script basically outputs the `oneline` commits. Although, quite simple and not so useful for many but still automates a quite simple task 
+This script basically outputs the `oneline` commits. Although, quite simple and not so useful for many but still automates a quite simple task
+
+## insta_poster
+This script will simply post a `post` on `instagram` 
 
 Sorry, if you read this, forgot to automate this as well...
