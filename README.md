@@ -11,6 +11,6 @@ So, what this does is, it creates an apk and opens the folder containing the apk
 This script basically outputs the `oneline` commits. Although, quite simple and not so useful for many but still automates a quite simple task
 
 ## insta_poster
-This script will simply post a `post` on `instagram` 
+This script simply posts a `post` on `instagram`, will be adding a feature which will post the `post`at a given time 
 
 Sorry, if you read this, forgot to automate this as well...
