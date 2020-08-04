@@ -2,11 +2,13 @@
 from instabot import Bot
 import os
 import argparse
+import getpass
 
 try:
     input = raw_input
 except:
     pass
+
 
 def set_args():
     parser = argparse.ArgumentParser()
@@ -16,6 +18,7 @@ def set_args():
     parser.add_argument("-c", "--caption", dest="caption", help="Caption of the post")
     return parser.parse_args()
 
+
 def upload_pic(options):
     if not options.username:
         username = input("Enter your instagram's username: ")
@@ -23,7 +26,7 @@ def upload_pic(options):
         username = options.username
     
     if not options.password:
-        password = input("Enter password: ")
+        password = getpass.getpass("Enter password: ")
     else:
         password = options.password
     
@@ -37,12 +40,20 @@ def upload_pic(options):
     else:
         caption = options.caption
 
+    os.system("echo '\n [.] Uploading your pic... please wait for a while!")    
+
     instaBot = Bot()
-    instaBot.login(username=username, password=password)
-    instaBot.upload_photo(image, caption=caption)
+    isLoggedIn = instaBot.login(username=username, password=password)
+    instaObj = instaBot.upload_photo(image, caption=caption)
+
+    if isLoggedIn and instaObj:
+        os.system("echo '\n [+] Pic has been uploaded successfully, check your posts.")
+    else:
+        os.system("echo '\n [-] Something went wrong while uploading the pic!")
+
+    instaBot.logout()
 
     
-
 try:
     options = set_args()
     upload_pic(options)
