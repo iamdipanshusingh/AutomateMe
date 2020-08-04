@@ -40,17 +40,9 @@ def upload_pic(options):
     else:
         caption = options.caption
 
-    os.system("echo '\n [.] Uploading your pic... please wait for a while!")    
-
     instaBot = Bot()
-    isLoggedIn = instaBot.login(username=username, password=password)
-    instaObj = instaBot.upload_photo(image, caption=caption)
-
-    if isLoggedIn and instaObj:
-        os.system("echo '\n [+] Pic has been uploaded successfully, check your posts.")
-    else:
-        os.system("echo '\n [-] Something went wrong while uploading the pic!")
-
+    instaBot.login(username=username, password=password)
+    instaBot.upload_photo(image, caption=caption)
     instaBot.logout()
 
     
