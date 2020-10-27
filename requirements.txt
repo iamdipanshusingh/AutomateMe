@@ -9,7 +9,7 @@ Brlapi==0.7.0
 certifi==2019.11.28
 chardet==3.0.4
 command-not-found==0.3
-cryptography==2.8
+cryptography==3.2
 cupshelpers==1.0
 dbus-python==1.2.16
 decorator==4.4.2
