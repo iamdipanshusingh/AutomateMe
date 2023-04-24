@@ -62,7 +62,7 @@ playsound==1.2.2
 pluggy==0.13.1
 proglog==0.1.9
 protobuf==3.6.1
-py==1.9.0
+py==1.10.0
 pycairo==1.16.2
 pycodestyle==2.6.0
 pycups==1.9.73
